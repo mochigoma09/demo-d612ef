@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>しん・どうぶつびょういん｜動物病院</title>
+<meta name="description" content="杉並区のしん・どうぶつびょういんは、大切なペットと飼い主様に寄り添う丁寧な診療を心がけています。安心してご相談ください。">
+<link rel="canonical" href="https://mochigoma09.github.io/demo-d612ef/">
+
+<!-- OGP -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="しん・どうぶつびょういん">
+<meta property="og:title" content="しん・どうぶつびょういん｜動物病院">
+<meta property="og:description" content="杉並区のしん・どうぶつびょういんは、大切なペットと飼い主様に寄り添う丁寧な診療を心がけています。安心してご相談ください。">
+<meta property="og:url" content="https://mochigoma09.github.io/demo-d612ef/">
+<meta property="og:image" content="">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="しん・どうぶつびょういん｜動物病院">
+<meta name="twitter:description" content="杉並区のしん・どうぶつびょういんは、大切なペットと飼い主様に寄り添う丁寧な診療を心がけています。安心してご相談ください。">
+<meta name="twitter:image" content="">
+
+<!-- 構造化データ（VeterinaryCare は preset の schema.orgサブタイプ。住所/電話は実値へ） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://mochigoma09.github.io/demo-d612ef/#org", "name": "しん・どうぶつびょういん", "url": "https://mochigoma09.github.io/demo-d612ef/" },
+    { "@type": "WebSite", "@id": "https://mochigoma09.github.io/demo-d612ef/#site", "url": "https://mochigoma09.github.io/demo-d612ef/", "name": "しん・どうぶつびょういん", "publisher": { "@id": "https://mochigoma09.github.io/demo-d612ef/#org" } },
+    { "@type": "VeterinaryCare", "@id": "https://mochigoma09.github.io/demo-d612ef/#biz", "name": "しん・どうぶつびょういん", "url": "https://mochigoma09.github.io/demo-d612ef/", "telephone": "03-5336-3721", "address": { "@type": "PostalAddress", "addressCountry": "JP", "addressRegion": "東京都", "addressLocality": "杉並区", "streetAddress": "高井戸東４丁目９−１" } }
+  ]
+}
+</script>
+
+<!-- フォント（コンセプトで差し替え） / 土台CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base/base.css">
+<!-- ↑ 案件コンセプトのトークンは、この後に <style>:root{ --color-primary: ...; }</style> で上書きする -->
+
+<style>
+:root {
+  --color-primary: #60A38D;
+  --color-accent: #E0A868;
+  --color-surface: #FDFDF9;
+  --color-text-main: #3A3F38;
+  --font-heading: 'Kosugi Maru', sans-serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+  --radius: 4px;
+  --space-xl: clamp(5rem, 10vw, 8rem);
+  --space-lg: clamp(3rem, 6vw, 5rem);
+}
+
+body {
+  color: var(--color-text-main);
+  background-color: var(--color-surface);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Header */
+.p-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 40px;
+  position: sticky;
+  top: 0;
+  background: rgba(253, 253, 249, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+.p-header__logo {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+/* Hero Section */
+.p-hero {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.p-hero__content {
+  grid-column: 2 / 7;
+  z-index: 2;
+}
+
+.p-hero__eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.p-hero__title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.p-hero__image {
+  grid-column: 6 / 13;
+  height: 80vh;
+  object-fit: cover;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+@media (max-width: 1024px) {
+  .p-hero { display: flex; flex-direction: column; padding-inline: 20px; min-height: auto; }
+  .p-hero__content { padding: 60px 0; }
+  .p-hero__image { width: 100%; height: 50vh; border-radius: var(--radius); }
+}
+
+/* Problem Section */
+.p-problem {
+  padding-block: var(--space-xl);
+  background: #fff;
+}
+
+.p-problem__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.p-problem__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.p-problem__text {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.6;
+  max-width: 15em;
+}
+
+.p-problem__desc {
+  margin-top: 4rem;
+  padding-left: 2rem;
+  border-left: 1px solid var(--color-line);
+}
+
+@media (max-width: 768px) {
+  .p-problem__grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* Menu Section */
+.p-menu {
+  padding-block: var(--space-xl);
+}
+
+.p-menu__header {
+  margin-bottom: var(--space-lg);
+  text-align: right;
+}
+
+.p-menu__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  display: inline-block;
+  border-bottom: 1px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+}
+
+.p-menu__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+}
+
+.p-menu__item {
+  background: var(--color-surface);
+  padding: 40px;
+  transition: background 0.3s;
+}
+
+.p-menu__item:hover {
+  background: #fff;
+}
+
+.p-menu__item-num {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.p-menu__item-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.p-menu__item-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .p-menu__grid { grid-template-columns: 1fr; }
+}
+
+/* Reasons Section */
+.p-reasons {
+  padding-block: var(--space-xl);
+  background-color: #F4F4F0;
+}
+
+.p-reasons__inner {
+  display: flex;
+  gap: 80px;
+}
+
+.p-reasons__sticky {
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+  width: 300px;
+}
+
+.p-reasons__list {
+  flex: 1;
+}
+
+.p-reasons__card {
+  margin-bottom: 120px;
+}
+
+.p-reasons__card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+}
+
+.p-reasons__card-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .p-reasons__inner { flex-direction: column; gap: 40px; }
+  .p-reasons__sticky { width: 100%; position: static; }
+}
+
+/* Doctor Section */
+.p-doctor {
+  padding-block: var(--space-xl);
+}
+
+.p-doctor__layout {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.p-doctor__image {
+  border-radius: var(--radius);
+  filter: grayscale(0.2);
+}
+
+.p-doctor__name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.p-doctor__post {
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.p-doctor__bio {
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .p-doctor__layout { grid-template-columns: 1fr; }
+}
+
+/* Voice Section */
+.p-voice {
+  padding-block: var(--space-xl);
+  background: #fff;
+}
+
+.p-voice__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.p-voice__item {
+  padding: 30px;
+  border: 1px solid var(--color-line);
+  position: relative;
+}
+
+.p-voice__item::before {
+  content: "“";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--color-accent);
+  line-height: 1;
+  font-family: serif;
+}
+
+.p-voice__meta {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  text-align: right;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .p-voice__grid { grid-template-columns: 1fr; }
+}
+
+/* Access Section */
+.p-access {
+  padding-block: var(--space-xl);
+}
+
+.p-access__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.p-access__info {
+  padding: 60px;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.p-access__map {
+  background: #eee;
+  min-height: 400px;
+}
+
+.p-access__table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+}
+
+.p-access__table th, .p-access__table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .p-access__layout { grid-template-columns: 1fr; }
+  .p-access__info { padding: 40px 20px; }
+}
+
+/* CTA Section */
+.p-cta {
+  padding-block: var(--space-xl);
+  text-align: center;
+}
+
+.p-cta__title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.p-cta__desc {
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+.p-cta__btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .p-cta__btns { flex-direction: column; align-items: center; }
+  .p-cta__btns .c-btn { width: 100%; }
+}
+
+/* Footer */
+.p-footer {
+  padding: 60px 20px;
+  border-top: 1px solid var(--color-line);
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+</style>
+<style>:root{--color-primary:#60A38D;--color-accent:#E0A868;--color-surface:#FDFDF9;デメリット:#3A3F38;--font-heading:'Kosugi Maru', sans-serif;--font-body:'Noto Sans JP', sans-serif;--radius:4px;}</style>
+</head>
+<body>
+
+<h1 class="sr-only">しん・どうぶつびょういん｜杉並区の寄り添う動物病院</h1>
+
+<header class="p-header">
+  <div class="p-header__logo">しん・どうぶつびょういん</div>
+  <button class="c-hamburger js-nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="メニューを開閉">
+    <span class="c-hamburger__bars"></span>
+  </button>
+  <nav class="c-nav" id="nav">
+    <a href="#hero">ホーム</a>
+    <a href="#menu">診療案内</a>
+    <a href="#doctor">院長紹介</a>
+    <a href="#access">アクセス</a>
+    <a href="#" class="c-btn">Web予約</a>
+  </nav>
+</header>
+
+<main>
+  <section class="p-hero" data-section="hero" id="hero">
+    <div class="p-hero__content">
+      <span class="p-hero__eyebrow">杉並の街に、寄り添う医療を。</span>
+      <h2 class="p-hero__title">言葉のない家族の<br>「声」を聴く。</h2>
+      <p>私たちは、技術と同じくらい「対話」を大切にする動物病院です。<br>飼い主様の不安を安心に変え、ペットの負担を最小限に。</p>
+      <div style="margin-top: 3rem;">
+        <a href="#" class="c-btn">はじめての方へ</a>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1549332409-c2580d165674?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTk1ODZ8MHwxfHNlYXJjaHwxfHxzdWdpbmFtaSUyMG5laWdoYm9yaG9vZCUyMHN0cmVldCUyMHBldHN8ZW58MHwwfHx8MTc4NDM3MDcwMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="杉並の穏やかな街並みとペット" class="p-hero__image">
+  </section>
+
+  <section class="p-problem" data-section="problem">
+    <div class="l-wrapper">
+      <div class="p-problem__grid">
+        <div>
+          <span class="p-problem__label">Our Philosophy</span>
+          <p class="p-problem__text">「病院に連れて行くこと」自体が、ペットや飼い主様のストレスになっていませんか？</p>
+        </div>
+        <div class="p-problem__desc">
+          <p>検査数値だけを見るのではなく、その子の性格や、ご家族のライフスタイルに合った治療を。杉並区の「しん・どうぶつびょういん」は、そんな当たり前で、もっとも大切なことを追求しています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-menu" data-section="menu" id="menu">
+    <div class="l-wrapper">
+      <div class="p-menu__header">
+        <h2 class="p-menu__title">診療案内</h2>
+      </div>
+      <div class="p-menu__grid">
+        <div class="p-menu__item">
+          <span class="p-menu__item-num">01</span>
+          <h3 class="p-menu__item-title">一般診療</h3>
+          <p>内科、外科、皮膚科など、全般的な健康相談を承ります。丁寧な触診と問診を重視しています。</p>
+          <div class="p-menu__item-tags"><span>予防接種</span><span>健康診断</span><span>寄生虫予防</span></div>
+        </div>
+        <div class="p-menu__item">
+          <span class="p-menu__item-num">02</span>
+          <h3 class="p-menu__item-title">シニアケア</h3>
+          <p>加齢に伴う変化に寄り添い、穏やかな日常を維持するためのQOL（生活の質）向上を提案します。</p>
+          <div class="p-menu__item-tags"><span>関節ケア</span><span>食事指導</span><span>緩和ケア</span></div>
+        </div>
+        <div class="p-menu__item">
+          <span class="p-menu__item-num">03</span>
+          <h3 class="p-menu__item-title">歯科・口腔外科</h3>
+          <p>お口の健康は全身の健康。痛みの少ない処置を心がけ、日々のデンタルケアもサポートします。</p>
+          <div class="p-menu__item-tags"><span>歯石除去</span><span>口臭相談</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-reasons" data-section="reasons">
+    <div class="l-wrapper">
+      <div class="p-reasons__inner">
+        <div class="p-reasons__sticky">
+          <h2 class="p-hero__title" style="font-size: 2.5rem;">選ばれる<br>理由</h2>
+          <p style="margin-top: 1rem; opacity: 0.7;">私たちが大切にしている<br>3つの約束。</p>
+        </div>
+        <div class="p-reasons__list">
+          <div class="p-reasons__card">
+            <img src="https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTk1ODZ8MHwxfHNlYXJjaHwxfHxjYXJpbmclMjB2ZXRlcmluYXJpYW4lMjB0YWxraW5nJTIwb3duZXJ8ZW58MHwwfHx8MTc4NDM3MDcwM3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="飼い主様の話を丁寧に聞く様子" class="p-reasons__card-img">
+            <h3 class="p-reasons__card-title">納得いくまで話し合える<br>カウンセリング時間</h3>
+            <p>一方的な説明ではなく、飼い主様の不安や疑問をすべて伺います。複数の選択肢を提示し、共に最適な方法を考えます。</p>
+          </div>
+          <div class="p-reasons__card">
+            <img src="https://images.unsplash.com/photo-1630438994394-3deff7a591bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTk1ODZ8MHwxfHNlYXJjaHwxfHxnZW50bGUlMjB2ZXQlMjBleGFtaW5hdGlvbiUyMGRvZ3xlbnwwfDB8fHwxNzg0MzcwNzAzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="優しく診察する様子" class="p-reasons__card-img">
+            <h3 class="p-reasons__card-title">ペットの心身に優しい<br>「穏やかな診察」</h3>
+            <p>病院が嫌いにならないよう、声掛けや触れ方に配慮。過度な拘束を避け、ペットのペースに合わせた診察を行います。</p>
+          </div>
+          <div class="p-reasons__card">
+            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTk1ODZ8MHwxfHNlYXJjaHwxfHxjYXQlMjBzbGVlcGluZyUyMGNvenklMjBibGFua2V0fGVufDB8MHx8fDE3ODQzNzA3MDR8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="リラックスした猫" class="p-reasons__card-img">
+            <h3 class="p-reasons__card-title">地域に根差した<br>ホームドクターとして</h3>
+            <p>日常の些細な変化から、専門病院への紹介まで。杉並の皆様がいつでも気軽に相談できる「最初の窓口」であり続けます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-doctor" data-section="doctor" id="doctor">
+    <div class="l-wrapper">
+      <div class="p-doctor__layout">
+        <img src="https://images.unsplash.com/photo-1700665537604-412e89a285c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTk1ODZ8MHwxfHNlYXJjaHwyfHxjYXJpbmclMjB2ZXRlcmluYXJpYW4lMjB0YWxraW5nJTIwb3duZXJ8ZW58MHwwfHx8MTc4NDM3MDcwM3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="院長" class="p-doctor__image">
+        <div>
+          <span class="p-doctor__post">院長 / 獣医師</span>
+          <h2 class="p-doctor__name">新 太郎</h2>
+          <div class="p-doctor__bio">
+            <p>動物たちは言葉を話せませんが、その表情や仕草で多くのことを伝えてくれます。私たちはその小さなサインを見逃さず、飼い主様と一緒にその子の幸せを考えたいと思っています。<br><br>「こんなことで相談してもいいのかな？」と思うようなことでも、どうぞ遠慮なくお話しください。杉並の地で、皆様と大切な家族の力になれることを願っております。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-voice" data-section="voice">
+    <div class="l-wrapper">
+      <h2 class="p-menu__title" style="margin-bottom: var(--space-lg);">飼い主様の声</h2>
+      <div class="p-voice__grid">
+        <div class="p-voice__item">
+          <p>先生がとても丁寧に話を聞いてくださり、不安だった気持ちが軽くなりました。診察中も優しく声をかけてくれるので安心してお任せできます。</p>
+          <div class="p-voice__meta">杉並区 A様（トイプードル）</div>
+        </div>
+        <div class="p-voice__item">
+          <p>猫の扱いに慣れていらっしゃるようで、うちの怖がりな子も落ち着いて診察を受けていました。説明も分かりやすく、納得して治療を進められました。</p>
+          <div class="p-voice__meta">杉並区 S様（日本猫）</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-access" data-section="access" id="access">
+    <div class="p-access__layout">
+      <div class="p-access__info">
+        <h2 class="p-doctor__name">アクセス・診療時間</h2>
+        <p style="margin-top: 1.5rem;">〒168-0072<br>東京都杉並区高井戸東４丁目９−１</p>
+        <p style="margin-top: 1rem; font-size: 1.5rem; font-weight: 700;">03-5336-3721</p>
+        
+        <table class="p-access__table">
+          <thead>
+            <tr><th>診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>09:00 - 12:00</td><td>●</td><td>●</td><td>●</td><td>／</td><td>●</td><td>●</td><td>▲</td></tr>
+            <tr><td>16:00 - 19:00</td><td>●</td><td>●</td><td>●</td><td>／</td><td>●</td><td>▲</td><td>／</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size: 0.75rem; margin-top: 1rem;">※木曜・祝日休診 / 日曜・土曜午後は予約診療のみ</p>
+      </div>
+      <div class="p-access__map">
+        <!-- Google Map Placeholder -->
+        <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#999; font-size:0.875rem; background:#f0f0f0;">
+          Google Map Area
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-cta" data-section="cta">
+    <div class="l-wrapper">
+      <h2 class="p-cta__title">大切な家族のために、<br>いまできることを。</h2>
+      <p class="p-cta__desc">気になる症状があるときも、健康チェックのときも。<br>いつでもお気軽にご相談ください。</p>
+      <div class="p-cta__btns">
+        <a href="tel:03-5336-3721" class="c-btn" style="background: var(--color-accent);">お電話で相談</a>
+        <a href="#" class="c-btn">Web予約・空き確認</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="p-footer">
+  <p>&copy; <span id="y"></span> しん・どうぶつびょういん All Rights Reserved.</p>
+</footer>
+
+<div class="c-floating-cta">
+  <a href="#" class="c-btn">Web予約はこちら</a>
+</div>
+
+<script>
+/* nav.js — 全画面ハンバーガーの開閉（背後スクロールロック）。全デモ共通の不変挙動。 */
+(function () {
+  var t = document.querySelector('.js-nav-toggle');
+  var n = document.getElementById('nav');
+  if (t && n) {
+    t.addEventListener('click', function () {
+      var open = t.getAttribute('aria-expanded') === 'true';
+      t.setAttribute('aria-expanded', String(!open));
+      n.classList.toggle('is-open', !open);
+      document.body.style.overflow = open ? '' : 'hidden';
+    });
+    n.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { t.setAttribute('aria-expanded', 'false'); n.classList.remove('is-open'); document.body.style.overflow = ''; }
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { t.setAttribute('aria-expanded', 'false'); n.classList.remove('is-open'); document.body.style.overflow = ''; } });
+  }
+  var y = document.getElementById('y'); if (y) y.textContent = new Date().getFullYear();
+
+  /* スクロールリビール（抑制的モーション）：各 data-section の直下要素を
+     ふわっと表示。クラスはJSで付与するのでJS無効環境では常に見える。
+     prefers-reduced-motion は base.css 側の全体無効化が効く。 */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('is-inview'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    document.querySelectorAll('[data-section]').forEach(function (sec) {
+      var kids = Array.prototype.slice.call(sec.children);
+      kids.forEach(function (el, i) {
+        el.classList.add('js-reveal');
+        el.style.transitionDelay = Math.min(i * 90, 360) + 'ms';
+        io.observe(el);
+      });
+    });
+  }
+})();
+
+</script>
+</body>
+</html>
