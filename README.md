@@ -1,2 +1,3 @@
 # demo-d612ef
-Auto generated demo site for しん・どうぶつびょういん
+
+AIによって自動生成された しん・どうぶつびょういん 様向けのデモサイトです。
